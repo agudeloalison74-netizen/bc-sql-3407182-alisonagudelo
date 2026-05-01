@@ -1,14 +1,25 @@
-# 🌿 Proyecto Semana 1 - SQL Jardín Botánico
+# 🌿 Proyecto SQL - Semana 2 (DDL)
 
 ## 📌 Descripción
-Este proyecto contiene el modelado de un dominio de jardín botánico usando SQLite.
+Diseño del esquema del dominio Jardín Botánico aplicando DDL.
 
-## 📁 Estructura
+## 🧱 Tablas
+- plants (principal)
+- species
+- zones
 
-- Proyecto_Jardin_Botanico_SQL/
+## ⚙️ Constraints usados
+- NOT NULL
+- DEFAULT
+- UNIQUE
+- CHECK
+- FOREIGN KEY
 
-## 🧠 Tecnologías
-- SQLite
+## 🚀 Ejecución
+
+
+sqlite3 jardin2.db < starter/proyecto.sql
+
 
 ## 👩‍💻 Autor
 Alison Agudelo
