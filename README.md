@@ -1,20 +1,25 @@
-# 🌿 Proyecto SQL - Semana 4 (Consultas SELECT)
+# 🌿 Proyecto SQL - Semana 2 (DDL)
 
 ## 📌 Descripción
-Proyecto enfocado en consultas SELECT sobre el dominio Jardín Botánico utilizando filtros, alias, ordenamiento y paginación.
+Diseño del esquema del dominio Jardín Botánico aplicando DDL.
 
-## 🧱 Tablas utilizadas
-- plants
+## 🧱 Tablas
+- plants (principal)
 - species
 - zones
 
-## ⚙️ Operaciones realizadas
-- INSERT INTO
-- UPDATE
-- DELETE
-- SELECT de verificación
+## ⚙️ Constraints usados
+- NOT NULL
+- DEFAULT
+- UNIQUE
+- CHECK
+- FOREIGN KEY
 
 ## 🚀 Ejecución
+
+
+sqlite3 jardin2.db < starter/proyecto.sql
+
 
 ```bash
 sqlite3 jardin4.db < starter/proyecto.sql
