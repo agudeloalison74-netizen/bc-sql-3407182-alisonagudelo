@@ -1,14 +1,39 @@
-# 🌿 Proyecto Semana 1 - SQL Jardín Botánico
+# 🌿 Proyecto SQL - Semana 4 (Consultas SELECT)
 
 ## 📌 Descripción
-Este proyecto contiene el modelado de un dominio de jardín botánico usando SQLite.
+Proyecto enfocado en consultas SELECT sobre el dominio Jardín Botánico utilizando filtros, alias, ordenamiento y paginación.
 
-## 📁 Estructura
+## 🧱 Tablas utilizadas
+- plants
+- species
+- zones
 
-- Proyecto_Jardin_Botanico_SQL/
+## ⚙️ Consultas implementadas
+- SELECT explícito
+- WHERE
+- ORDER BY
+- LIMIT
+- OFFSET
+- Alias descriptivos
 
-## 🧠 Tecnologías
-- SQLite
+## 🚀 Ejecución
 
-## 👩‍💻 Autor
+```bash
+sqlite3 jardin4.db < starter/proyecto.sql
+👩‍💻 Autor
+
 Alison Agudelo
+
+
+---
+
+# 🥇 7. EJECUTAR EL PROYECTO
+
+Abre PowerShell:
+
+```powershell
+cd "C:\Portafolio 2026\3407182\bc-sql-3407182-alisonagudelo\Proyecto_Jardin_Botanico_SQL_Semana4\starter"
+
+Luego:
+
+Get-Content proyecto.sql | sqlite3 jardin4.db
