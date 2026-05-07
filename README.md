@@ -8,13 +8,11 @@ Proyecto enfocado en consultas SELECT sobre el dominio Jardín Botánico utiliza
 - species
 - zones
 
-## ⚙️ Consultas implementadas
-- SELECT explícito
-- WHERE
-- ORDER BY
-- LIMIT
-- OFFSET
-- Alias descriptivos
+## ⚙️ Operaciones realizadas
+- INSERT INTO
+- UPDATE
+- DELETE
+- SELECT de verificación
 
 ## 🚀 Ejecución
 
