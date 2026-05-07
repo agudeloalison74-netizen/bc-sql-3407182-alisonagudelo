@@ -1,49 +1,37 @@
-# 🌿 Proyecto SQL - Jardín Botánico
+# 🌿 Proyecto SQL - Semana 3 (DML)
 
 ## 📌 Descripción
-Este proyecto corresponde a la semana 1 del curso, donde se modela un dominio de un jardín botánico utilizando SQLite.
+Proyecto enfocado en manipulación de datos usando INSERT, UPDATE y DELETE en el dominio Jardín Botánico.
 
-Se crean tablas principales relacionadas con:
-- Plantas (plants)
-- Especies (species)
-- Zonas (zones)
-- Guías (guides)
+## 🧱 Tablas utilizadas
+- plants
+- species
+- zones
 
-## 🧱 Estructura
+## ⚙️ Operaciones realizadas
+- INSERT INTO
+- UPDATE
+- DELETE
+- SELECT de verificación
 
+## 🚀 Ejecución
 
-Proyecto_Jardin_Botanico_SQL/
-│
-├── README.md
-└── starter/
-└── proyecto.sql
-
-
-## 🚀 Cómo ejecutar
-
-1. Ejecutar el script SQL:
-
-sqlite3 jardin.db < starter/proyecto.sql
-
-
-2. Abrir la base de datos:
-
-sqlite3 jardin.db
-
-
-## 🔍 Consultas incluidas
-
-- Listar todas las plantas
-- Ordenar plantas
-- Contar registros
-- Filtrar por zona
-- Filtrar guías por experiencia
-
-## 📊 Datos
-
-- 15 registros en la tabla principal (plants)
-- 5 registros en cada tabla secundaria
-
-## 👩‍💻 Autor
+```bash
+sqlite3 jardin3.db < starter/proyecto.sql
+👩‍💻 Autor
 
 Alison Agudelo
+
+
+---
+
+# 🥇 7. EJECUTAR EL PROYECTO
+
+Abre PowerShell:
+
+```powershell
+cd "C:\Portafolio 2026\3407182\bc-sql-3407182-alisonagudelo\Proyecto_Jardin_Botanico_SQL_Semana3\starter"
+
+Luego:
+
+Get-Content proyecto.sql | sqlite3 jardin3.db
