@@ -1,7 +1,7 @@
-# 🌿 Proyecto SQL - Semana 3 (DML)
+# 🌿 Proyecto SQL - Semana 4 (Consultas SELECT)
 
 ## 📌 Descripción
-Proyecto enfocado en manipulación de datos usando INSERT, UPDATE y DELETE en el dominio Jardín Botánico.
+Proyecto enfocado en consultas SELECT sobre el dominio Jardín Botánico utilizando filtros, alias, ordenamiento y paginación.
 
 ## 🧱 Tablas utilizadas
 - plants
@@ -17,7 +17,7 @@ Proyecto enfocado en manipulación de datos usando INSERT, UPDATE y DELETE en el
 ## 🚀 Ejecución
 
 ```bash
-sqlite3 jardin3.db < starter/proyecto.sql
+sqlite3 jardin4.db < starter/proyecto.sql
 👩‍💻 Autor
 
 Alison Agudelo
@@ -30,8 +30,8 @@ Alison Agudelo
 Abre PowerShell:
 
 ```powershell
-cd "C:\Portafolio 2026\3407182\bc-sql-3407182-alisonagudelo\Proyecto_Jardin_Botanico_SQL_Semana3\starter"
+cd "C:\Portafolio 2026\3407182\bc-sql-3407182-alisonagudelo\Proyecto_Jardin_Botanico_SQL_Semana4\starter"
 
 Luego:
 
-Get-Content proyecto.sql | sqlite3 jardin3.db
+Get-Content proyecto.sql | sqlite3 jardin4.db
