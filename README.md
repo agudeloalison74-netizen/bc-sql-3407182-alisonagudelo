@@ -1,21 +1,19 @@
-# 🌿 Proyecto SQL - Semana 2 (DDL)
+# 🌿 Proyecto SQL - Jardín Botánico
 
-## 📌 Descripción
-Diseño del esquema del dominio Jardín Botánico aplicando DDL.
+Repositorio del bootcamp SQL.
 
-## 🧱 Tablas
-- plants (principal)
-- species
-- zones
+## 📚 Semanas
 
-## ⚙️ Constraints usados
-- NOT NULL
-- DEFAULT
-- UNIQUE
-- CHECK
-- FOREIGN KEY
+- Semana 1 → Introducción SQL
+- Semana 2 → DDL
+- Semana 3 → DML
+- Semana 4 → SELECT
+- Semana 5 → Operadores y filtros
+- Semana 6 → Funciones de agregación
 
-## 🚀 Ejecución
+## 🛠️ Tecnologías
+- SQLite
+- SQL
 
 
 sqlite3 jardin2.db < starter/proyecto.sql
@@ -28,15 +26,3 @@ sqlite3 jardin4.db < starter/proyecto.sql
 Alison Agudelo
 
 
----
-
-# 🥇 7. EJECUTAR EL PROYECTO
-
-Abre PowerShell:
-
-```powershell
-cd "C:\Portafolio 2026\3407182\bc-sql-3407182-alisonagudelo\Proyecto_Jardin_Botanico_SQL_Semana4\starter"
-
-Luego:
-
-Get-Content proyecto.sql | sqlite3 jardin4.db
