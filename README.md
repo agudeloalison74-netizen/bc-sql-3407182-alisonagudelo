@@ -1,14 +1,26 @@
-# 🌿 Proyecto Semana 1 - SQL Jardín Botánico
+# 🌿 Proyecto SQL - Semana 6
 
 ## 📌 Descripción
-Este proyecto contiene el modelado de un dominio de jardín botánico usando SQLite.
+Proyecto enfocado en funciones de agregación SQL sobre el dominio Jardín Botánico.
 
-## 📁 Estructura
+## 🧱 Tablas utilizadas
+- plants
+- species
+- zones
 
-- Proyecto_Jardin_Botanico_SQL/
+## ⚙️ Funciones utilizadas
+- COUNT
+- SUM
+- AVG
+- MIN
+- MAX
+- GROUP BY
+- HAVING
 
-## 🧠 Tecnologías
-- SQLite
+## 🚀 Ejecución
 
-## 👩‍💻 Autor
+```bash
+sqlite3 jardin6.db < starter/proyecto.sql
+👩‍💻 Autor
+
 Alison Agudelo
