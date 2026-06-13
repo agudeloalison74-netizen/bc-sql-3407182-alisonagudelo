@@ -10,6 +10,8 @@ Repositorio del bootcamp SQL.
 - Semana 4 → SELECT
 - Semana 5 → Operadores y filtros
 - Semana 6 → Funciones de agregación
+- Semana 7 → NULL y Constraints
+- Semana 9 → JOINs: INNER JOIN y LEFT JOIN
 
 ## 🛠️ Tecnologías
 - SQLite
