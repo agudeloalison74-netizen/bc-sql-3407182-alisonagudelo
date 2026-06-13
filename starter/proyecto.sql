@@ -1,6 +1,9 @@
 -- ============================================
--- PROYECTO SEMANAL: Jardín Botánico (Semana 2)
+-- PROYECTO SEMANAL: NULL y Constraints
+-- Semana 07 — NOT NULL, UNIQUE, CHECK, FK
 -- ============================================
+
+PRAGMA foreign_keys = ON;
 
 -- ============================================
 -- LIMPIEZA
@@ -8,85 +11,79 @@
 
 DROP TABLE IF EXISTS plants;
 DROP TABLE IF EXISTS species;
-DROP TABLE IF EXISTS zones;
 
 -- ============================================
--- TABLA 1: plants (principal)
+-- TABLA SPECIES
 -- ============================================
 
-CREATE TABLE IF NOT EXISTS plants (
-    id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL,
-    scientific_name TEXT UNIQUE,
-    height REAL CHECK (height > 0),
-    is_active INTEGER NOT NULL DEFAULT 1,
-    zone_id INTEGER,
-    FOREIGN KEY (zone_id) REFERENCES zones(id)
-);
-
--- ============================================
--- TABLA 2: species
--- ============================================
-
-CREATE TABLE IF NOT EXISTS species (
+CREATE TABLE species (
     id INTEGER PRIMARY KEY,
     name TEXT NOT NULL UNIQUE,
-    climate TEXT NOT NULL DEFAULT 'templado'
+    family TEXT NOT NULL
 );
 
 -- ============================================
--- TABLA 3: zones
+-- TABLA PLANTS
 -- ============================================
 
-CREATE TABLE IF NOT EXISTS zones (
+CREATE TABLE plants (
     id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL UNIQUE,
-    description TEXT
+    common_name TEXT NOT NULL,
+
+    plant_code TEXT NOT NULL UNIQUE,
+
+    height_cm REAL NOT NULL
+        CHECK (height_cm > 0),
+
+    status TEXT NOT NULL DEFAULT 'Activa',
+
+    notes TEXT,
+
+    species_id INTEGER NOT NULL
+        REFERENCES species(id)
+        ON DELETE RESTRICT
 );
 
 -- ============================================
--- INSERTAR (DATOS)
+-- DATOS DE PRUEBA
 -- ============================================
 
--- ZONAS
-INSERT INTO zones VALUES
-(1, 'Zona Floral', 'Flores y plantas decorativas'),
-(2, 'Zona Bosque', 'Árboles grandes'),
-(3, 'Zona Desértica', 'Plantas resistentes'),
-(4, 'Zona Tropical', 'Ambiente húmedo'),
-(5, 'Zona Medicinal', 'Plantas curativas');
+INSERT INTO species (id, name, family)
+VALUES
+    (1, 'Rosa Gallica', 'Rosaceae'),
+    (2, 'Helianthus Annuus', 'Asteraceae'),
+    (3, 'Lavandula Angustifolia', 'Lamiaceae');
 
--- ESPECIES
-INSERT INTO species VALUES
-(1, 'Rosáceas', 'templado'),
-(2, 'Asteráceas', 'cálido'),
-(3, 'Cactáceas', 'desértico'),
-(4, 'Orquídeas', 'tropical'),
-(5, 'Coníferas', 'frío');
+INSERT INTO plants
+(id, common_name, plant_code, height_cm, status, notes, species_id)
+VALUES
+    (1, 'Rosa Roja', 'PL001', 80, 'Activa', 'Flor ornamental', 1),
 
--- PLANTAS (15 registros)
-INSERT INTO plants VALUES
-(1, 'Rosa', 'Rosa rubiginosa', 1.2, 1, 1),
-(2, 'Girasol', 'Helianthus annuus', 3.0, 1, 2),
-(3, 'Cactus', 'Cactaceae', 0.5, 1, 3),
-(4, 'Orquídea', 'Orchidaceae', 0.4, 1, 1),
-(5, 'Helecho', 'Pteridophyta', 0.8, 1, 2),
-(6, 'Lavanda', 'Lavandula', 0.6, 1, 1),
-(7, 'Bambú', 'Bambusoideae', 6.0, 1, 3),
-(8, 'Tulipán', 'Tulipa', 0.3, 1, 1),
-(9, 'Pino', 'Pinus', 10.0, 1, 2),
-(10, 'Palma', 'Arecaceae', 8.0, 1, 3),
-(11, 'Menta', 'Mentha', 0.4, 1, 5),
-(12, 'Aloe Vera', 'Aloe barbadensis', 0.5, 1, 3),
-(13, 'Bugambilia', 'Bougainvillea', 2.5, 1, 2),
-(14, 'Jacaranda', 'Jacaranda mimosifolia', 12.0, 1, 2),
-(15, 'Lirio', 'Lilium', 0.7, 1, 1);
+    (2, 'Rosa Blanca', 'PL002', 75, 'Activa', NULL, 1),
+
+    (3, 'Girasol Gigante', 'PL003', 220, 'Activa', 'Zona central', 2),
+
+    (4, 'Girasol Amarillo', 'PL004', 180, 'Activa', NULL, 2),
+
+    (5, 'Lavanda Francesa', 'PL005', 60, 'Activa', 'Aroma intenso', 3),
+
+    (6, 'Lavanda Azul', 'PL006', 55, 'Activa', NULL, 3);
 
 -- ============================================
--- VERIFICACIÓN
+-- CONSULTA 1: IS NULL
 -- ============================================
 
--- .tables
--- PRAGMA table_info(plants);
--- PRAGMA table_info(species);
--- PRAGMA table_info(zones);
+SELECT
+    id,
+    common_name
+FROM plants
+WHERE notes IS NULL;
+
+-- ============================================
+-- CONSULTA 2: COALESCE
+-- ============================================
+
+SELECT
+    common_name AS planta,
+    COALESCE(notes, 'Sin observaciones') AS observaciones
+FROM plants;

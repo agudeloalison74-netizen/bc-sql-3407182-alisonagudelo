@@ -1,27 +1,22 @@
-# 🌿 Proyecto SQL - Jardín Botánico
+# 🌿 Proyecto SQL - Semana 7 (NULL y Constraints)
 
-Repositorio del bootcamp SQL.
+## 📌 Descripción
 
-## 📚 Semanas
+Implementación de restricciones de integridad y manejo de valores NULL para el dominio Jardín Botánico.
 
-- Semana 1 → Introducción SQL
-- Semana 2 → DDL
-- Semana 3 → DML
-- Semana 4 → SELECT
-- Semana 5 → Operadores y filtros
-- Semana 6 → Funciones de agregación
+## 🌱 Entidades
 
-## 🛠️ Tecnologías
+- Plants
+- Species
+- Zones
+- Guides
+
+## 🛠 Tecnologías
+
 - SQLite
 - SQL
 
-
-sqlite3 jardin2.db < starter/proyecto.sql
-
-
-```bash
-sqlite3 jardin4.db < starter/proyecto.sql
-👩‍💻 Autor
+## 👩‍💻 Autor
 
 Alison Agudelo
 
