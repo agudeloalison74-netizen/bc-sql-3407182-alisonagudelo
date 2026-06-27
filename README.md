@@ -1,29 +1,46 @@
-# 🌿 Proyecto SQL - Semana 9 (JOINs)
+# Bootcamp SQL - 3407182
 
-## 📌 Descripción
+Repositorio correspondiente al Bootcamp de Bases de Datos SQL del SENA.
 
-Implementación de consultas JOIN para el dominio Jardín Botánico utilizando SQLite.
+## Aprendiz
 
-## 📂 Entidades
+- **Nombre:** Alison Agudelo
+- **Ficha:** 3407182
+
+## Dominio del proyecto
+
+🌿 **Jardín Botánico**
+
+Entidades principales:
 
 - Plants
 - Species
+- Zones
 - Guides
 
-## 🔍 Consultas realizadas
+## Organización del repositorio
 
-- INNER JOIN
-- JOIN con tres tablas
-- LEFT JOIN
-- Detección de registros huérfanos
-- Reporte agregado con COUNT
+Cada semana del bootcamp se desarrolla en una rama independiente.
 
-## 🛠️ Tecnologías
+| Rama | Contenido |
+|------|-----------|
+| main | Información general del repositorio |
+| week-1 | Conoce tu Dominio |
+| week-2 | DDL de tu Dominio |
+| week-3 | DML: Manipulación de Datos |
+| week-4 | Consultas SELECT |
+| week-5 | Operadores y Filtros |
+| week-6 | Funciones de Agregación |
+| week-7 | NULL y Constraints |
+| week-9 | JOINs aplicados al dominio |
 
-- SQLite
+## Tecnologías utilizadas
 
-## 👩‍💻 Autor
+- SQLite 3
+- SQL
+- Git
+- GitHub
+
+## Autor
 
 Alison Agudelo
-
-
